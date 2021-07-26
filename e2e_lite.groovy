@@ -31,6 +31,7 @@ wrappers {
         "STAGE1_BLUEMIX_API_KEY",
         "mh-autonp-stage1-bluemix-apikey")
     }
+}
     
   stages {
     stage("local") {
