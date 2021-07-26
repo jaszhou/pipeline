@@ -6,7 +6,7 @@ pipeline {
     FOO = "PIPELINE"
   }
 
-wrappers {
+options {
     colorizeOutput()
 
     credentialsBinding {
