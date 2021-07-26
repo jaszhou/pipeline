@@ -47,20 +47,7 @@ wrappers {
     stage("global") {
       steps {
         sh 'echo "FOO is $FOO and BAR is $BAR"'
-        sh '''
-                    docker run --rm \
-            --network=host \
-            --name cli-lite-test \
-            -e PUBLIC_API_ENDPOINT="test.cloud.ibm.com" \
-            -e ES_PLUGIN_LOCATION="/es-plugin_linux_amd64" \
-            -e INSTANCE_NAME="hyperion-lite" \
-            -e SERVICE_KEY_NAME="hyperion-lite-api-key" \
-            -e STAGE1_BLUEMIX_API_KEY="${STAGE1_BLUEMIX_API_KEY}" \
-            -e STAGE1_BLUEMIX_API_KEY_MH_AUTOPP="${STAGE1_BLUEMIX_API_KEY_MH_AUTOPP}" \
-            -e CLI_TEST_TAGS="not @enterprise and not @lite-skip" \
-            "cli-e2e-test:latest"
-
-        '''
+     
       }
     }
   }
