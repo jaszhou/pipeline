@@ -16,7 +16,7 @@ pipeline {
       }
       steps {
         sh 'echo "FOO is $FOO and BAR is $BAR"'
-        sh 'echo ${env.STAGE1_BLUEMIX_API_KEY}'
+        // sh 'echo ${env.STAGE1_BLUEMIX_API_KEY}'
         sh 'echo ${STAGE1_BLUEMIX_API_KEY}'
       }
     }
